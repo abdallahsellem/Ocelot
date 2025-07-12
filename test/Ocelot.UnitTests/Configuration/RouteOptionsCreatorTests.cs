@@ -123,9 +123,9 @@ public class RouteOptionsCreatorTests : UnitTest
                 AuthenticationProviderKeys = isAuthenticationProviderKeys ?
                     new string[] { string.Empty, "Test #1" } : null,
             },
-            RouteClaimsRequirement = new Dictionary<string, string>
+            RouteClaimsRequirement = new Dictionary<string, string[]>
             {
-                {string.Empty, string.Empty},
+                {string.Empty, []},
             },
             FileCacheOptions = new FileCacheOptions
             {

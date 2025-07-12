@@ -69,7 +69,7 @@ public class AuthorizationMiddlewareTests : UnitTest
         _authService
             .Setup(x => x.Authorize(
                        It.IsAny<ClaimsPrincipal>(),
-                       It.IsAny<Dictionary<string, string>>(),
+                       It.IsAny<Dictionary<string, string[]>>(),
                        It.IsAny<List<PlaceholderNameAndValue>>()))
             .Returns(expected);
     }
@@ -77,7 +77,7 @@ public class AuthorizationMiddlewareTests : UnitTest
     private void ThenTheAuthServiceIsCalledCorrectly()
     {
         _authService.Verify(
-            x => x.Authorize(It.IsAny<ClaimsPrincipal>(), It.IsAny<Dictionary<string, string>>(), It.IsAny<List<PlaceholderNameAndValue>>()),
+            x => x.Authorize(It.IsAny<ClaimsPrincipal>(), It.IsAny<Dictionary<string, string[]>>(), It.IsAny<List<PlaceholderNameAndValue>>()),
             Times.Once);
     }
 }

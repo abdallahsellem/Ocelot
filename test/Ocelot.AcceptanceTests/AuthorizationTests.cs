@@ -74,7 +74,7 @@ public sealed class AuthorizationTests : AuthenticationSteps
                     },
                     RouteClaimsRequirement =
                     {
-                        {"UserType", "registered"},
+                        {"UserType", ["registered", "guest"]},
                     },
                 },
             },
@@ -134,7 +134,7 @@ public sealed class AuthorizationTests : AuthenticationSteps
                     },
                     RouteClaimsRequirement =
                     {
-                        {"UserType", "registered"},
+                        {"UserType", ["registered", "guest"]},
                     },
                 },
             },
@@ -270,7 +270,7 @@ public sealed class AuthorizationTests : AuthenticationSteps
                     },
                     RouteClaimsRequirement =
                     {
-                        {"Role", "User"},
+                        {"Role", ["User", "AdminUser"]},
                     },
                 },
             },

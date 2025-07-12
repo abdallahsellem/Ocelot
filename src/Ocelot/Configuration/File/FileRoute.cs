@@ -29,7 +29,7 @@ public class FileRoute : IRoute, ICloneable // TODO: Inherit from FileDynamicRou
         QoSOptions = new FileQoSOptions();
         RateLimitOptions = new FileRateLimitRule();
         RequestIdKey = default; // to be reviewed
-        RouteClaimsRequirement = new Dictionary<string, string>();
+        RouteClaimsRequirement = new Dictionary<string, string[]>();
         RouteIsCaseSensitive = default; // to be reviewed
         SecurityOptions = new FileSecurityOptions();
         ServiceName = default; // to be reviewed
@@ -81,7 +81,7 @@ public class FileRoute : IRoute, ICloneable // TODO: Inherit from FileDynamicRou
     public FileQoSOptions QoSOptions { get; set; }
     public FileRateLimitRule RateLimitOptions { get; set; }
     public string RequestIdKey { get; set; }
-    public Dictionary<string, string> RouteClaimsRequirement { get; set; }
+    public Dictionary<string, string[]> RouteClaimsRequirement { get; set; }
     public bool RouteIsCaseSensitive { get; set; }
     public FileSecurityOptions SecurityOptions { get; set; }
     public string ServiceName { get; set; }
